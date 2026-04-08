@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-</head>
-<body>
-    <div id="app"></div>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <!-- Babel Script -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel" src="app.jsx"></script>
-    <!-- <script type="text/jsx">
         // // Select the div element with 'app' id
         // const app = document.getElementById('app');
 
@@ -36,13 +21,15 @@
         }
 
         function HomePage() {
-            return <div></div>;
+            return (
+            <div>
+                {/* Nesting the Header component */}
+                <Header />
+            </div>
+            );
         }
 
         const root = ReactDOM.createRoot(app);
         //root.render(<h1>Develop. Preview. Ship.</h1>);
-        root.render(<Header />);
-        // or use <Header/>
-    </script> -->
-</body>
-</html>
+        //root.render(<Header />); // or use <Header/>
+        root.render(<HomePage />);
